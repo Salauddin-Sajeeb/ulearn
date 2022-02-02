@@ -1,0 +1,19 @@
+.exercise-2
+{
+    background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 88vh;
+}
+.video-section
+{
+    background-color: blanchedalmond;
+    width: 500px;
+    height: 100px;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+.button-section
+{
+    margin-top: 100px;
+}

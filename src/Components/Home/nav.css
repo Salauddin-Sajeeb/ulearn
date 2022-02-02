@@ -1,0 +1,30 @@
+.container
+{
+    display: flex;
+}
+
+.logo
+{
+    height: 70px;
+    left: 0;
+    object-fit: cover;
+    top: 0;
+    width: 352px;
+
+}
+
+.header
+{
+    position: absolute;
+    width: 840px;
+    height: 50px;
+    left: 400px;
+    top: 0px;
+  
+    background: #FFFFFF;
+}
+.home
+{
+    text-decoration: none;
+    margin-left: 50px;
+}

@@ -1,0 +1,48 @@
+.page-2
+{
+    background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 88vh;
+  
+   
+}
+.hejda
+{
+    margin-left:10px ;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.continue
+{
+    height: 70px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+.hejda-button
+{
+
+    width: 250px;
+    border-style: none;
+    height: 40px;
+    background-color:grey;
+    margin-bottom: 10px;
+    
+}
+.continue-button
+{
+    color:black;
+    text-decoration: none;
+    background-color: darkorange;
+    margin-left: 900px;
+    width: 145px;
+    border-style: none;
+
+}
+.continue-btn-style
+{
+    text-decoration: none;
+    color: black;
+}
