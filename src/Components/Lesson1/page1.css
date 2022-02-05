@@ -3,9 +3,14 @@
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 88vh;
+    height: 80vh;
 }
-
+.progress
+{
+    width: 700px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
 .hej-audio
 {
  display: block;
@@ -16,7 +21,7 @@
 }
 .hello
 {
-    height: 60px;
+    height: 50px;
 }
 .divider
 {
@@ -34,11 +39,12 @@
     margin-left:595px ;
     padding-top: 20px;
     padding-bottom: 10px;
+    width: fit-content;
 }
 
 .continue
 {
-    height: 70px;
+    height: 60px;
     background-color: white;
 }
 

@@ -3,16 +3,25 @@ import Nav from './Lesson1-nav/Nav';
 import VideoPlayer from 'react-video-js-player'
 import hej from '../../videos/hej.mov'
 import './page1.css'
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import { Link } from 'react-router-dom'
 const Page1 = () => {
+
     const [show, Setshow] = useState(false);
     const [button, setbutton] = useState(false)
     const VideoSrc = hej;
 
     return (
         <div>
-            <Nav />
+            <div className='d-flex'>
+                <Nav />
+                <ProgressBar className='progress' variant='warning' now={5} />
+                <p className='mx-3 mt-1'>1/6</p>
+            </div>
+
+
             <div className='page-1'>
-                <h1 className='py-4'>Your first Swedish words! Click To Listen</h1>
+                <h1 className='py-4'>Your first Swedish words! Click  To Listen</h1>
                 <div className='hej-audio'>
                     <VideoPlayer
                         src={VideoSrc}
@@ -28,7 +37,7 @@ const Page1 = () => {
                 <div className='divider'>
 
                 </div>
-                <div className='mt-3'>
+                <div className='mt-1'>
                     <h4>Hello</h4>
                 </div>
 
@@ -43,9 +52,9 @@ const Page1 = () => {
                     }
                 </div>
                 {
-                    button ? <button className='continue-button btn-lg'
+                    button ? <button className='continue-button btn-lg '
 
-                    ><a className='continue-btn-style' href="#page-2">Continue</a></button> : null
+                    ><Link className='continue-btn-style' to='/e1p2'>Continue</Link></button> : null
                 }
             </div>
         </div>

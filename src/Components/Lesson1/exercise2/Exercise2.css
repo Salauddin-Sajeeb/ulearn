@@ -3,7 +3,7 @@
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 88vh;
+    height: 80vh;
 }
 .video-section
 {
@@ -16,4 +16,25 @@
 .button-section
 {
     margin-top: 100px;
+    height: 250px;
 }
+.continue-section
+{
+    height: 40px;
+    background-color: white;
+}
+.btn-style
+{
+    text-decoration: none;
+    color: black;
+}
+.continue-btn
+{
+    background-color: darkorange;
+    margin-left: 900px;
+    width: 145px;
+    border-style: none;
+    margin-top: 10px;
+ 
+}
+

@@ -86,7 +86,7 @@
 .lessons-input
 {
     margin-left: 50px;
-    margin-top: 40px;
+ 
     display: flex;
     flex-direction: column;
 }

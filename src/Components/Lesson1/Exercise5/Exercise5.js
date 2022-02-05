@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -12,7 +12,7 @@ import { Button } from '@mui/material';
 const Exercise5 = () => {
 
     const [open, setOpen] = React.useState(false);
-
+    const [jag, setJug] = React.useState('jag')
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
     const handleClickOpen = () => {
@@ -23,7 +23,7 @@ const Exercise5 = () => {
         setOpen(false);
     };
 
-    const jag = (e) => {
+    const jagHandle = (e) => {
         e.preventDefault();
         let value = e.target.value;
         if (value === 'jag') {
@@ -61,14 +61,14 @@ const Exercise5 = () => {
 
                 <div className='text-area d-flex '>
                     <div className='blank-area px-3'>
-                        <input onBlur={jag} type="text" /> ska älska dig tills mitt hjärta går under
+                        <input onBlur={jagHandle} type="text" /> ska älska dig tills mitt hjärta går under
                         Uti alla stunder, blixtar och dunder
                         Lova mig att <input onBlur={vi} type="text" /> räknar sekunder
-                        Åh, baby, <input onBlur={jag} type="text" /> är alltid med dig
+                        Åh, baby, <input onBlur={jagHandle} type="text" /> är alltid med dig
                         Älska dig tills mitt hjärta går under
                         Uti alla stunder, med blixtar och dunder
                         Lova mig att <input onBlur={vi} type="text" /> räknar sekunder
-                        För, baby, <input onBlur={jag} alert="successfully done" type="text" /> är alltid med dig
+                        För, baby, <input onBlur={jagHandle} alert="successfully done" type="text" /> är alltid med dig
 
 
                     </div>
