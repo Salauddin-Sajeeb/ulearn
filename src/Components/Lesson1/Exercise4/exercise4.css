@@ -1,0 +1,34 @@
+.video
+{
+height: 100px;
+margin-left: 370px;
+}
+
+.continue-section
+{
+    display: flex;
+   
+}
+.continue-button
+{
+    background-color: darkorange;
+    margin-left: 800px;
+    width: 145px;
+    border-style: none;
+    margin-top: 10px;
+}
+.button-sec
+{
+   height: 20px;
+}
+input{
+    border:none;
+    outline: 0;
+    background: transparent;
+    width: 60px;
+    height: 10px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

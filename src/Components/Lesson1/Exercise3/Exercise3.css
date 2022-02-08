@@ -3,5 +3,38 @@
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 88vh;
+    height: 80vh;
+  
+}
+.table-section
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-weight: 400;
+  
+   
+}
+.thead
+{
+    font-size: 20px;
+}
+.table
+{
+    font-weight: 500;
+}
+
+.continue-section
+{
+    height: 60px;
+    background-color: white;
+}
+.btn-style
+{
+  
+}
+.continue-btn
+{
+
 }

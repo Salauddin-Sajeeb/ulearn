@@ -1,0 +1,70 @@
+.page-6
+{
+    background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.audio-sec
+{
+
+    width: 50px;
+    height: 50px;
+    margin-left: 450px;
+    margin-top: 20px;
+}
+.audio-button
+{
+
+    border-style: none;
+}
+.image
+{
+    height: 50px;
+    width: 50px;
+}
+.audio
+{
+    background-color: transparent;
+}
+.guy-img
+{
+    height: 80px;
+    width: 70px;
+}
+.guy
+{
+ 
+    margin-left: 50px;
+    font-weight: 500;
+}
+.conversation
+{
+   margin-left: 100px;
+   margin-top: 60px;
+   
+}
+.girl
+{
+    margin-left: 250px;
+    font-weight: 500;
+}
+.paragraph
+{
+    width: 250px;
+    height: 50px;
+    background-color: darkgray;
+}
+
+input
+{
+    border:none;
+    outline: 0;
+    background: transparent;
+    width: 60px;
+    height: 10px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

@@ -11,6 +11,10 @@ import Page4 from './Components/Lesson1/Exercise1/Page4';
 import Page5 from './Components/Lesson1/Exercise1/Page5';
 import Page6 from './Components/Lesson1/Exercise1/Page6';
 import Exercise2 from './Components/Lesson1/exercise2/Exercise2';
+import Exercise3 from './Components/Lesson1/Exercise3/Exercise3';
+import Exercise4 from './Components/Lesson1/Exercise4/Exercise4';
+import Exercise5 from './Components/Lesson1/Exercise5/Exercise5';
+import Exercise6 from './Components/Lesson1/Exercise6/Exercise6';
 
 
 function App() {
@@ -28,6 +32,10 @@ function App() {
           <Route path="/e1p5" element={<Page5 />} />
           <Route path="/e1p6" element={<Page6 />} />
           <Route path="/e2p1" element={<Exercise2 />} />
+          <Route path="/e3" element={<Exercise3 />} />
+          <Route path="/e4" element={<Exercise4 />} />
+          <Route path="/e5" element={<Exercise5 />} />
+          <Route path="/e6" element={<Exercise6 />} />
 
         </Routes>
       </BrowserRouter>
