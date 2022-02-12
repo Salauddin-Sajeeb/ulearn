@@ -32,3 +32,8 @@ input{
     justify-content: center;
     padding: 10px;
 }
+
+input :invalid
+{
+    background-color: red;
+}

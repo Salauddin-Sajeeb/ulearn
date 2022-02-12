@@ -8,7 +8,6 @@ const CoursePercent = () => {
     }
     return (
         <div>
-
             {percent}
         </div>
     );

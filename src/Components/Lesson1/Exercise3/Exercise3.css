@@ -38,3 +38,20 @@
 {
 
 }
+.list
+{
+    list-style: none;
+    justify-content: flex-start;
+    align-items:space-between;
+ 
+    display: flex;
+    margin-left: 30px;
+   
+}
+.background
+{
+    background-color:#fbc556;
+    width: 650px;
+    border-radius: 5px;
+    height: 75px;
+}

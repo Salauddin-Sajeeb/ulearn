@@ -5,6 +5,8 @@ import hej from '../../videos/hej.mov'
 import './page1.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion';
+import { green } from '@mui/material/colors';
 const Page1 = () => {
 
     const [show, Setshow] = useState(false);
@@ -27,6 +29,7 @@ const Page1 = () => {
                         src={VideoSrc}
                         width="350"
                         height="250"
+                        type='mp4'
                     />
                 </div>
                 <div className='hej'>
@@ -45,10 +48,13 @@ const Page1 = () => {
             <div className='continue'>
                 <div className='pt-3'>
                     {
-                        !button ? <button onClick={() => {
-                            Setshow(true)
-                            setbutton(true)
-                        }} className='hej-button '>1<span className='px-5'>Hej</span></button> : null
+                        !button ? <motion.button
+                            whileTap={{ background: green, scale: 1.2 }}
+                            onClick={() => {
+
+                                Setshow(true)
+                                setbutton(true)
+                            }} className='hej-button '>1<span className='px-5'>Hej</span></motion.button> : null
                     }
                 </div>
                 {

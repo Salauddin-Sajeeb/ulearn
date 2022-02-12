@@ -2,14 +2,13 @@ import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Nav from '../Lesson1-nav/Nav';
-import './Exercise2.css'
-const Exercise2 = () => {
 
+const Exercise2c = () => {
     return (
         <div>
             <div className='d-flex'>
                 <Nav />
-                <ProgressBar variant='warning' now={35} />
+                <ProgressBar striped variant='warning' now={45} />
                 <p className='mx-2 pt-1'>2/6</p>
             </div>
             <div className='exercise-2'>
@@ -32,7 +31,7 @@ const Exercise2 = () => {
                 </div>
                 <div className='continue-section'>
                     <button className='continue-btn  btn-lg'>
-                        <Link className='btn-style' to='/e2p2'>Continue</Link>
+                        <Link className='btn-style' to='/e2p4'>Continue</Link>
                     </button>
                 </div>
             </div>
@@ -40,4 +39,4 @@ const Exercise2 = () => {
     );
 };
 
-export default Exercise2;
+export default Exercise2c;

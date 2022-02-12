@@ -63,11 +63,15 @@
     border-radius: 5px;
     text-align: start;
     height: 160px ;
+  
+    
 }
+
+
 .button-details
 {
     text-decoration: none;
-    color: black;
+  color: black;
 }
 
 .button-2
@@ -89,9 +93,13 @@
  
     display: flex;
     flex-direction: column;
+   
 }
 .lessons-input :hover
 {
-    background-color: turquoise;
+    
+  background-color: aqua;
+
+
 }
 

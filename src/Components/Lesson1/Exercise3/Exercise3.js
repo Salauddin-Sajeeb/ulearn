@@ -2,87 +2,80 @@ import React from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Nav from '../Lesson1-nav/Nav';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import './Exercise3.css'
+function createData(name, calories, fat, carbs, protein) {
+    return { name, calories, fat, carbs, protein };
+}
+
+const rows = [
+    createData('first Singular', 'I', 'jag'),
+    createData('second singular', 'you', 'du'),
+    createData('third singular', 'he', 'han'),
+    createData('', 'she', 'hon'),
+    createData('', 'it', 'den(en-form)'),
+    createData('', '', 'ett(ett-form)'),
+    createData('first plural', 'we', 'vi'),
+    createData('second plural', 'You', 'ni'),
+    createData('third plural', 'they', 'de')
+];
+
 const Exercise3 = () => {
 
     return (
         <div>
             <div className='d-flex'>
                 <Nav />
-                <ProgressBar variant='warning' now={40} />
+                <ProgressBar striped variant='warning' now={65} />
                 <p className='mx-2 pt-1'>3/6</p>
             </div>
+
             <div className='exercise-3 pt-3'>
                 <h2>Subject Pronouns</h2>
-                <h4 className='mt-3'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
+                <h4 className='my-3'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
                 <div className="table-container">
                     <div className='table-section'>
-                        <table className="table mt-3 table-bordered border-dark text-dark">
-                            <thead>
-                                <tr>
-                                    <th className='thead' scope="col">Person</th>
-                                    <th className='thead' scope="col">English</th>
-                                    <th className='thead' scope="col">Swedish</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
+                        <TableContainer component={Paper}>
+                            <Table sx={{ minWidth: 650, minHeight: 350 }} size="small" aria-label="a dense table">
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell sx={{ fontWeight: 700 }}>Person</TableCell>
+                                        <TableCell sx={{ fontWeight: 700 }} align="right">English</TableCell>
+                                        <TableCell sx={{ fontWeight: 700 }} align="right">Swedish</TableCell>
 
-                                    <td>first Singular</td>
-                                    <td>I</td>
-                                    <td>jag</td>
-                                </tr>
-                                <tr>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {rows.map((row) => (
+                                        <TableRow
+                                            key={row.name}
+                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                        >
+                                            <TableCell component="th" scope="row">
+                                                {row.name}
+                                            </TableCell>
+                                            <TableCell align="right">{row.calories}</TableCell>
+                                            <TableCell align="right">{row.fat}</TableCell>
+                                            <TableCell align="right">{row.carbs}</TableCell>
+                                            <TableCell align="right">{row.protein}</TableCell>
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
 
-                                    <td>second singular</td>
-                                    <td>you</td>
-                                    <td>du</td>
-                                </tr>
-
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td rowSpan={3}>third singular</td>
-                                    <td>he</td>
-                                    <td>han</td>
-                                </tr>
-                                <tr>
-                                    <td>she</td>
-                                    <td>hon</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        it
-                                    </td>
-                                    <td>
-                                        den(en-form)/ett(ett-form)
-                                    </td>
-                                </tr>
-
-                            </tbody>
-                            <tbody>
-                                <tr>
-                                    <td>first plural</td>
-                                    <td>we</td>
-                                    <td>vi</td>
-                                </tr>
-                                <tr><td>second plural</td>
-                                    <td>you</td>
-                                    <td>ni</td></tr>
-                                <tr> <td>third plural</td>
-                                    <td>they</td>
-                                    <td>de</td></tr>
-
-
-
-                            </tbody>
-                        </table>
                     </div>
                 </div>
             </div>
             <div className='continue-section'>
                 <button className='continue-btn  btn-lg'>
-                    <Link className='btn-style' to='/e4'>Continue</Link>
+                    <Link className='btn-style' to='/e3p1'>Continue</Link>
                 </button>
             </div>
 

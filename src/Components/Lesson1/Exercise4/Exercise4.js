@@ -1,30 +1,39 @@
 import React, { useState } from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+
 import VideoPlayer from 'react-video-js-player'
 import Nav from '../Lesson1-nav/Nav';
-import { Button } from '@mui/material';
+
 import { ProgressBar } from 'react-bootstrap';
 import part1 from "../../../videos/part1_s.mov"
 import './exercise4.css'
 import { Link } from 'react-router-dom';
-const Exercise4 = () => {
-    const VideoSrc = part1;
-    const [open, setOpen] = React.useState(false);
-    const [jag, setJug] = React.useState('jag')
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
 
-    const handleClose = () => {
-        setOpen(false);
-    };
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    borderRadius: '5%'
+
+
+};
+
+
+const Exercise4 = () => {
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const VideoSrc = part1;
 
     const jagHandle = (e) => {
         e.preventDefault();
@@ -48,14 +57,11 @@ const Exercise4 = () => {
             e.target.value = '';
         }
     }
-
-
-
     return (
         <div>
             <div className="d-flex">
                 <Nav />
-                <ProgressBar variant='warning' now={65}></ProgressBar>
+                <ProgressBar striped variant='warning' now={80}></ProgressBar>
                 <p className='mt-1 mx-2' >4/6</p>
             </div>
             <div className='exercise-5'>
@@ -73,7 +79,7 @@ const Exercise4 = () => {
                 <div className='text-area d-flex '>
                     <div className='blank-area px-3'>
                         Baby, <input type="text" /> får säga vad <input type="text" /> vill,
-                        Ingenting som <input type="text" /> ska tänka på
+                        Ingenting som <input type="text" />  ska tänka på
                         Skrik till hela världen "<input type="text" /> är min",
                         Inget annat kommer spela roll
                         <input type="text" /> har varandra, alltid tillsammans,
@@ -111,7 +117,7 @@ const Exercise4 = () => {
                 </div>
                 <div className='button-sec'>
                     <div>
-                        <button className='btn btn-secondary mx-5 px-5 '>jag</button>
+                        <button draggable='true' className='btn btn-secondary mx-5 px-5 '>jag</button>
                         <button className='btn btn-secondary mx-5 px-5'>de</button>
                         <button className='btn btn-secondary mx-5 px-5'>hon</button>
                         <button className='btn btn-secondary mx-5 px-5'>vi</button>
@@ -120,16 +126,17 @@ const Exercise4 = () => {
                 </div>
                 <div className='hint-area d-flex'>
                     <div className='solution pt-3'>
-                        <button onClick={handleClickOpen} className='btn btn-warning px-5'>Show Solution</button>
-                        <Dialog
-                            fullScreen={fullScreen}
+                        <Button className='bg-warning text-dark py-2' onClick={handleOpen}>Show Solution</Button>
+                        <Modal
+
                             open={open}
                             onClose={handleClose}
-                            aria-labelledby="responsive-dialog-title"
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
                         >
+                            <Box sx={style}>
 
-                            <DialogContent>
-                                <DialogContentText sx={{ fontWeight: '500' }}>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Baby, de får säga vad de vill,
                                     Ingenting som du ska tänka på
                                     Skrik till hela världen "Du är min",
@@ -142,18 +149,9 @@ const Exercise4 = () => {
                                     Håll min hand, snart så är de långt bort
                                     Allting kommer lösa sig och
                                     I din famn, gör jag vad som helst för dig
-
-
-
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button autoFocus onClick={handleClose}>
-                                    Close X
-                                </Button>
-                            </DialogActions>
-                        </Dialog>
-
+                                </Typography>
+                            </Box>
+                        </Modal>
 
                     </div>
 

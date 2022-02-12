@@ -1,30 +1,41 @@
 import React, { useState } from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import './exercise5.css'
 import Nav from '../Lesson1-nav/Nav';
-import { Button } from '@mui/material';
+
 import { Link } from 'react-router-dom';
 import part2 from '../../../videos/part2_s.mov'
 import VideoPlayer from 'react-video-js-player'
+import { ProgressBar } from 'react-bootstrap';
+import { FormControl, MenuItem, Select } from '@mui/material';
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    borderRadius: '5%'
 
+};
+const options = [
+    { name: "jag", id: 1 },
+    { name: "vi", id: 2 },
+    { name: "de", id: 3 },
+
+];
 const Exercise5 = () => {
     const VideoSrc = part2;
     const [open, setOpen] = React.useState(false);
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const [val, setVal] = useState();
     const jagHandle = (e) => {
         e.preventDefault();
         let value = e.target.value;
@@ -43,12 +54,19 @@ const Exercise5 = () => {
         }
 
     }
+    const [age, setAge] = React.useState('');
 
-
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
 
     return (
         <div>
-            <Nav />
+            <div className="d-flex">
+                <Nav />
+                <ProgressBar striped variant='warning' now={90}></ProgressBar>
+                <p className='mt-1 mx-2' >5/6</p>
+            </div>
             <div className='exercise-5'>
                 <h1 className='py-4'>Myra Granberg</h1>
                 <div className='video'>
@@ -63,7 +81,22 @@ const Exercise5 = () => {
 
                 <div className='text-area d-flex '>
                     <div className='blank-area px-3'>
-                        <input onBlur={jagHandle} type="text" /> ska älska dig tills mitt hjärta går under
+
+
+                        <Select
+                            sx={{ height: 10, border: 'none' }}
+                            labelId="demo-simple-select-label"
+                            id="demo-simple-select"
+                            value={age}
+
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={0}>--select--</MenuItem>
+                            <MenuItem value={10}>jag</MenuItem>
+                            <MenuItem value={20}>de</MenuItem>
+                            <MenuItem value={30}>vi</MenuItem>
+                        </Select>
+                        ska älska dig tills mitt hjärta går under
                         Uti alla stunder, blixtar och dunder
                         Lova mig att <input onBlur={vi} type="text" /> räknar sekunder
                         Åh, baby, <input onBlur={jagHandle} type="text" /> är alltid med dig
@@ -90,16 +123,17 @@ const Exercise5 = () => {
                 </div>
                 <div className='hint-area d-flex '>
                     <div className='solution pt-3'>
-                        <button onClick={handleClickOpen} className='btn btn-warning px-5'>Show Solution</button>
-                        <Dialog
-                            fullScreen={fullScreen}
+                        <Button className='bg-warning text-dark py-2' onClick={handleOpen}>Show Solution</Button>
+                        <Modal
+
                             open={open}
                             onClose={handleClose}
-                            aria-labelledby="responsive-dialog-title"
+                            aria-labelledby="modal-modal-title"
+                            aria-describedby="modal-modal-description"
                         >
+                            <Box sx={style}>
 
-                            <DialogContent>
-                                <DialogContentText sx={{ fontWeight: '500', height: '200px' }}>
+                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Jag ska älska dig tills mitt hjärta går under <br />
                                     Uti alla stunder, med blixtar och dunder <br />
                                     Lova mig att vi räknar sekunder <br />
@@ -109,14 +143,10 @@ const Exercise5 = () => {
                                     Lova mig att vi räknar sekunder <br />
                                     För, baby, jag är alltid med dig
 
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button autoFocus onClick={handleClose}>
-                                    Close X
-                                </Button>
-                            </DialogActions>
-                        </Dialog>
+
+                                </Typography>
+                            </Box>
+                        </Modal>
 
 
                     </div>

@@ -9,7 +9,14 @@ import Nav from '../Lesson1-nav/Nav';
 const Page6 = () => {
     const [show, Setshow] = useState(false);
     const [button, setbutton] = useState(false)
+
     const VideoSrc = hej;
+    const delay = e => {
+        e.preventDefault()
+        setTimeout(() => {
+
+        }, 2000);
+    }
     return (
         <div>
             <div className='d-flex'>
@@ -23,14 +30,15 @@ const Page6 = () => {
                 <h1 className='py-4'>Your first Swedish words! Click  To Listen</h1>
                 <div className='hej-audio'>
                     <VideoPlayer
+
                         src={VideoSrc}
                         width="350"
                         height="250"
                     />
                 </div>
-                <div className='god-morgon'>
+                <div className='hej'>
                     {
-                        show ? <h4 className='ml-3'>Tach</h4> : null
+                        show ? <h4 className=''>Tach</h4> : null
                     }
                 </div>
                 <div className='divider'>
@@ -47,7 +55,8 @@ const Page6 = () => {
                         !button ? <button onClick={() => {
                             Setshow(true)
                             setbutton(true)
-                        }} className='hej-button '>5<span className='px-5'>Tach</span></button> : null
+                            delay(true)
+                        }} className='hej-button '>6<span className='px-5'>Tach</span></button> : null
                     }
                 </div>
                 {
