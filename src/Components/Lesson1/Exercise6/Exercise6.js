@@ -10,14 +10,13 @@ import ReactAudioPlayer from 'react-audio-player';
 import audio from '../../../audios/hej_c.mp3'
 import { Link } from 'react-router-dom';
 import Useauth from '../../../Hooks/Useauth';
-import CoursePercent from '../../Home/CoursePercent';
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#fbc556',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -28,6 +27,7 @@ const Exercise6 = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const { handlePercent, finishLession1 } = Useauth()
 
     return (
         <div>
@@ -39,15 +39,15 @@ const Exercise6 = () => {
             <div className='page-6'>
                 <h1 className='pt-2'>Basic Conversation-hej!</h1>
                 <h6>Fill in the gaps for the following conversation!</h6>
-                <div className='audio-sec'>
+                <div className='audio-sec d-flex'>
                     <button className='audio-button'>
                         <ReactAudioPlayer
                             src={audio}
                             autoPlay
                             controls
                         />
-                        <img className='img-fluid image' src="https://i.ibb.co/27cLJbh/Whats-App-Image-2022-02-09-at-1-07-25-PM.jpg" alt=""></img>
                     </button>
+                    <img className='img-fluid image mx-5' src="https://i.ibb.co/27cLJbh/Whats-App-Image-2022-02-09-at-1-07-25-PM.jpg" alt=""></img>
                 </div>
 
                 <div className='conversation '>
@@ -97,7 +97,11 @@ const Exercise6 = () => {
 
 
                     <div className='continue'>
-                        <button className='continue-button  btn-lg'>
+                        <button onClick={() => {
+                            handlePercent()
+                            finishLession1()
+                        }
+                        } className='continue-button  btn-lg'>
                             <Link className='btn-style' to='/'>Continue</Link>
                         </button>
                     </div>

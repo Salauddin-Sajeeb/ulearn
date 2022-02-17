@@ -1,0 +1,14 @@
+.test
+{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    overflow: hidden;
+    
+}
+.page1
+{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}

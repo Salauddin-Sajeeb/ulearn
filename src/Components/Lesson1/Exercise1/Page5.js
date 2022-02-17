@@ -45,9 +45,11 @@ const Page5 = () => {
                 <div className='pt-3'>
                     {
                         !button ? <button onClick={() => {
+                            setTimeout(function () {
+                                setbutton(true)
+                            }, 2000);
                             Setshow(true)
-                            setbutton(true)
-                        }} className='hej-button '>5<span className='px-5'>God kväll</span></button> : null
+                        }} className='hej-button'>5<span className='px-5'>God kväll</span></button> : null
                     }
                 </div>
                 {

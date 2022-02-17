@@ -15,14 +15,10 @@ import Exercise3 from './Components/Lesson1/Exercise3/Exercise3';
 import Exercise4 from './Components/Lesson1/Exercise4/Exercise4';
 import Exercise5 from './Components/Lesson1/Exercise5/Exercise5';
 import Exercise6 from './Components/Lesson1/Exercise6/Exercise6';
-import Exercise2b from './Components/Lesson1/exercise2/Exercise2.1';
-import Exercise2c from './Components/Lesson1/exercise2/Exercise2c';
-import Exercise2d from './Components/Lesson1/exercise2/Exercise2d';
-import Exercise2e from './Components/Lesson1/exercise2/Exercise2e';
-import Exercise2f from './Components/Lesson1/exercise2/Exercise2f';
 import Exercise3a from './Components/Lesson1/Exercise3/Exercise3a';
 import Exercise3b from './Components/Lesson1/Exercise3/Exercise3b';
 import AuthProvider from './Context/AuthProvider';
+import Test from './Components/Test/Test';
 
 
 function App() {
@@ -41,17 +37,14 @@ function App() {
             <Route path="/e1p5" element={<Page5 />} />
             <Route path="/e1p6" element={<Page6 />} />
             <Route path="/e2p1" element={<Exercise2 />} />
-            <Route path='/e2p2' element={<Exercise2b />} />
-            <Route path='/e2p3' element={<Exercise2c />} />
-            <Route path='/e2p4' element={<Exercise2d />} />
-            <Route path='/e2p5' element={<Exercise2e />} />
-            <Route path='/e2p6' element={<Exercise2f />} />
             <Route path="/e3" element={<Exercise3 />} />
             <Route path="/e3p1" element={<Exercise3a />} />
             <Route path="/e3p2" element={<Exercise3b />} />
             <Route path="/e4" element={<Exercise4 />} />
             <Route path="/e5" element={<Exercise5 />} />
             <Route path="/e6" element={<Exercise6 />} />
+
+            <Route path='/test' element={<Test />} />
 
           </Routes>
         </BrowserRouter>

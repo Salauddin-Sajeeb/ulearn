@@ -6,7 +6,7 @@ import './page1.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion';
-import { green } from '@mui/material/colors';
+import ReactPlayer from 'react-player'
 const Page1 = () => {
 
     const [show, Setshow] = useState(false);
@@ -25,11 +25,11 @@ const Page1 = () => {
             <div className='page-1'>
                 <h1 className='py-4'>Your first Swedish words! Click  To Listen</h1>
                 <div className='hej-audio'>
-                    <VideoPlayer
-                        src={VideoSrc}
-                        width="350"
-                        height="250"
-                        type='mp4'
+                    <ReactPlayer
+                        url="https://www.youtube.com/watch?v=aK3aUW08YGw"
+                        height='250px'
+                        controls
+                        autoplay
                     />
                 </div>
                 <div className='hej'>
@@ -49,12 +49,15 @@ const Page1 = () => {
                 <div className='pt-3'>
                     {
                         !button ? <motion.button
-                            whileTap={{ background: green, scale: 1.2 }}
-                            onClick={() => {
 
+                            whileTap={{ scale: 1.3, background: "green" }}
+                            onClick={() => {
+                                setTimeout(function () {
+                                    setbutton(true)
+                                }, 2000);
                                 Setshow(true)
-                                setbutton(true)
-                            }} className='hej-button '>1<span className='px-5'>Hej</span></motion.button> : null
+
+                            }} className='hej-button'>1<span className='px-5'>Hej</span></motion.button> : null
                     }
                 </div>
                 {

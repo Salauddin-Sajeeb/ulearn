@@ -14,7 +14,7 @@
 .hej-audio
 {
  display: block;
- margin-left: 430px;
+ margin-left: 300px;
  margin-right: auto;
  border-radius: 10px;
  height: 300px;
@@ -66,13 +66,7 @@
     background-color:grey;
     
 }
-.hej-button ::after
-{
-    margin-top: 10px;
-    border-style: none;
-    background-color: green;
-    transition: .5s ease-in;
-}
+
 .continue-button
 {
     color:black;

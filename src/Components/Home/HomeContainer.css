@@ -45,6 +45,15 @@
     margin-top: -40px;
    
 }
+.ellipse-bg
+{
+    background-color: green;
+    border-radius: 24px;
+    height: 48px;
+    width: 48px;
+    margin-left: 140px;
+    margin-top: 40px;
+}
 .line-1
 {
     height: 150px;
@@ -84,6 +93,7 @@
     margin-top: 20px;
     height: 160px;
     text-align: start;
+   
 }
 
 
@@ -101,5 +111,10 @@
   background-color: aqua;
 
 
+}
+ul
+{
+    list-style: none;
+    text-align: start;
 }
 

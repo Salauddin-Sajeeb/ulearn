@@ -2,10 +2,10 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CoursePercent from './CoursePercent';
+import Useauth from '../../Hooks/Useauth';
 import './HomeContainer.css'
 const HomeContainer = () => {
-
+    const { percent, lession1 } = Useauth()
     return (
         <div className='home-container mt-3'>
 
@@ -13,19 +13,24 @@ const HomeContainer = () => {
                 <img className='memoji mx-5 img-fluid' src="https://i.ibb.co/NKX2fMH/memoji.png" alt="" />
                 <div className=''>
                     <h1 className='text-start mt-3'>Hej!</h1>
-                    <h3 className='d-flex'><span className='mx-2'>You have Completed</span> <CoursePercent />% of the course</h3>
+                    <h3 className='d-flex'><span className='mx-2'>You have Completed</span> {percent}% of the course</h3>
                 </div>
 
             </div>
 
             <div className="lesson d-flex">
                 <div>
+
                     <div className="ellipse">
 
                     </div>
                     <div className="ellipse-1">
 
                     </div>
+
+
+
+
                     <div className='line-1'></div>
                     <div className="ellipse">
 
@@ -55,7 +60,7 @@ const HomeContainer = () => {
                     <motion.button
                         className='button-2'
                         whileHover={{ scale: 1.1 }}
-                        disabled={true}
+                        disabled={!lession1 ? true : false}
                     >
 
                         <h4>Lesson 2 : Grettings & Subject Pronouns</h4>

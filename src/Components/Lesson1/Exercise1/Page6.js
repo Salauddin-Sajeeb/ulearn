@@ -53,9 +53,11 @@ const Page6 = () => {
                 <div className='pt-3'>
                     {
                         !button ? <button onClick={() => {
+                            setTimeout(function () {
+                                setbutton(true)
+                            }, 2000);
+
                             Setshow(true)
-                            setbutton(true)
-                            delay(true)
                         }} className='hej-button '>6<span className='px-5'>Tach</span></button> : null
                     }
                 </div>

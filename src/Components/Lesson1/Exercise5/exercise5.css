@@ -21,8 +21,9 @@
 
 .text-area
 {
+margin-top: 30px;
+padding-bottom: 20px;
 
-padding-bottom: 50px;
 }
 
 .blank-area
@@ -64,7 +65,7 @@ input :focus
 
 .hint-area
 {
- height: 80px;
+ height: 70px;
     background-color: white;
     margin-top: 40px;
 }

@@ -3,14 +3,11 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-
-import VideoPlayer from 'react-video-js-player'
 import Nav from '../Lesson1-nav/Nav';
-
 import { ProgressBar } from 'react-bootstrap';
-import part1 from "../../../videos/part1_s.mov"
 import './exercise4.css'
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 
 const style = {
@@ -19,7 +16,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#fbc556',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
@@ -33,7 +30,7 @@ const Exercise4 = () => {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const VideoSrc = part1;
+
 
     const jagHandle = (e) => {
         e.preventDefault();
@@ -65,16 +62,17 @@ const Exercise4 = () => {
                 <p className='mt-1 mx-2' >4/6</p>
             </div>
             <div className='exercise-5'>
-                <h1 className='py-4'>Myra Granberg</h1>
+                <h1 className='py-3'>Myra Granberg</h1>
                 <div className='video'>
-                    <VideoPlayer
-                        src={VideoSrc}
-                        width="450"
-                        height="100"
+                    <ReactPlayer
+                        url='https://www.youtube.com/watch?v=zFw-zYKO2rg'
+                        height='160px'
+                        width='550px'
+                        controls
                     />
                 </div>
 
-                <h4 className='my-2 pb-4'>Fill in the gaps with the correct subject pronouns</h4>
+                <h4 className='mt-1 pt-5'>Fill in the gaps with the correct subject pronouns</h4>
 
                 <div className='text-area d-flex '>
                     <div className='blank-area px-3'>

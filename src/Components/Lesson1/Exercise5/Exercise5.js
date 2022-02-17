@@ -7,21 +7,23 @@ import './exercise5.css'
 import Nav from '../Lesson1-nav/Nav';
 
 import { Link } from 'react-router-dom';
-import part2 from '../../../videos/part2_s.mov'
+
 import VideoPlayer from 'react-video-js-player'
 import { ProgressBar } from 'react-bootstrap';
 import { FormControl, MenuItem, Select } from '@mui/material';
+import ReactPlayer from 'react-player';
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 400,
-    bgcolor: 'background.paper',
+    bgcolor: '#fbc556',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    borderRadius: '5%'
+    borderRadius: '5%',
+    fontWeight: '700'
 
 };
 const options = [
@@ -31,7 +33,7 @@ const options = [
 
 ];
 const Exercise5 = () => {
-    const VideoSrc = part2;
+
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -68,18 +70,19 @@ const Exercise5 = () => {
                 <p className='mt-1 mx-2' >5/6</p>
             </div>
             <div className='exercise-5'>
-                <h1 className='py-4'>Myra Granberg</h1>
+                <h1 className='pt-4'>Myra Granberg</h1>
                 <div className='video'>
-                    <VideoPlayer
-                        src={VideoSrc}
-                        width="450"
-                        height="100"
+                    <ReactPlayer
+                        url='https://www.youtube.com/watch?v=aVNuoeh0Ovw'
+                        height='180px'
+                        width='550px'
+                        controls
                     />
                 </div>
 
-                <h4 className='my-3 pb-4'>Fill in the gaps with the correct subject pronouns</h4>
+                <h4 className='mt-5 pt-4'>Fill in the gaps with the correct subject pronouns</h4>
 
-                <div className='text-area d-flex '>
+                <div className='text-area d-flex  '>
                     <div className='blank-area px-3'>
 
 

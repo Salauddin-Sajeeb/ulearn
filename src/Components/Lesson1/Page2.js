@@ -15,7 +15,7 @@ const Page2 = () => {
         <div className=''>
             <div className='d-flex'>
                 <Nav />
-                <ProgressBar className='progress' variant='warning' now={10} />
+                <ProgressBar className='progress' striped variant='warning' now={10} />
                 <p className='mx-3 mt-1'>1/6</p>
             </div>
             <div className='page-2'>
@@ -43,8 +43,10 @@ const Page2 = () => {
                 <div className='pt-3'>
                     {
                         !button ? <button onClick={() => {
+                            setTimeout(function () {
+                                setbutton(true)
+                            }, 2000);
                             Setshow(true)
-                            setbutton(true)
                         }} className='hejda-button '>2<span className='px-5'>Hej då </span></button> : null
                     }
                 </div>
