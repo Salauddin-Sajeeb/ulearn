@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import './page3.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom'
-import hej from '../../../videos/god_m.mov'
-import VideoPlayer from 'react-video-js-player'
 import Nav from '../Lesson1-nav/Nav';
+import ReactPlayer from 'react-player';
 
 const Page3 = () => {
     const [show, Setshow] = useState(false);
     const [button, setbutton] = useState(false)
-    const VideoSrc = hej;
+
     return (
         <div>
             <div className='d-flex'>
@@ -22,10 +21,11 @@ const Page3 = () => {
             <div className='page-1'>
                 <h1 className='py-4'>Your first Swedish words! Click  To Listen</h1>
                 <div className='hej-audio'>
-                    <VideoPlayer
-                        src={VideoSrc}
-                        width="350"
-                        height="250"
+                    <ReactPlayer
+                        url="https://www.youtube.com/watch?v=h8UFY79FiAY"
+                        height='250px'
+                        controls
+                        autoplay
                     />
                 </div>
                 <div className='god-morgon'>

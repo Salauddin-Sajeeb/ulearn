@@ -2,15 +2,15 @@ import React from 'react';
 import { useState } from 'react/cjs/react.development';
 import VideoPlayer from 'react-video-js-player'
 import Nav from './Lesson1-nav/Nav';
-import Goodbye from '../../videos/hej_då.mov'
 import './page2.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 const Page2 = () => {
 
     const [show, Setshow] = useState(false);
     const [button, setbutton] = useState(false)
-    const VideoSrc = Goodbye;
+
     return (
         <div className=''>
             <div className='d-flex'>
@@ -21,10 +21,11 @@ const Page2 = () => {
             <div className='page-2'>
                 <h1 className='py-4'>Your first Swedish words! Click To Listen</h1>
                 <div className='hej-audio'>
-                    <VideoPlayer
-                        src={VideoSrc}
-                        width="350"
-                        height="250"
+                    <ReactPlayer
+                        url="https://www.youtube.com/watch?v=A5yth-HyCr8"
+                        height='250px'
+                        controls
+                        autoplay
                     />
                 </div>
                 <div className='hejda'>

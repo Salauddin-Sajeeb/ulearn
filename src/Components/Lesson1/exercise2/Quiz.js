@@ -38,6 +38,7 @@ const Quiz = () => {
         setScore(0);
         setCurrentQuestion(0);
         setShowResults(false);
+        setCurrentImg(0)
     };
 
     return (
@@ -50,22 +51,29 @@ const Quiz = () => {
             {showResults ? (
                 /* 4. Final Results */
                 <div className="final-results pt-5">
-                    <h1>Final Results</h1>
-                    <h2>
-                        {score} out of {Datas.length} correct - (
-                        {(score / Datas.length) * 100}%)
-                    </h2>
-                    <button className='button-quiz' onClick={() => restartGame()}>Restart quiz</button>
-                    <button
 
-                        className='button-quiz mx-3'>
-                        <Link className='button-quiz' to='/e3'>Next Exercise</Link></button>
+                    <h2>
+                        You Scored {score}/{Datas.length}
+                    </h2>
+                    {
+                        score < 4 ?
+                            <img className='img-result img-fluid' src='https://i.ibb.co/R4vsyJp/retry.png'></img>
+                            :
+                            <img className='img-result img-fluid' src="https://i.ibb.co/gm1wrmM/well-done.png" alt="" srcset="" />
+
+                    }
+
+                    <div>
+                        <button className='continue-button btn-lg '
+
+                        ><Link className='continue-btn-style' to='/e3'>Continue</Link></button>
+                    </div>
                 </div>
             ) : (
 
                 /* 5. Question Card  */
                 <div>
-                    <h1 className='py-1'>Match the correct Answer with this image</h1>
+                    <h1 className='py-1'>Match the correct Answer with image</h1>
                     <img className='img-quiz' src={images[currentImg]} alt="" />
                     <div className="question-card">
                         {/* Current Question  */}
@@ -83,8 +91,13 @@ const Quiz = () => {
                                             style={{ backgroundColor: bgColor }}
                                             key={option.id}
                                             onClick={() => {
-                                                optionClicked(option.isCorrect)
-                                                switchImg()
+
+                                                setTimeout(function () {
+                                                    optionClicked(option.isCorrect)
+                                                }, 1000);
+                                                setTimeout(function () {
+                                                    switchImg()
+                                                }, 1000);
                                             }} className='btn btn-secondary button-option mx-5 px-5'> {option.text}</button>
                                     )
                                 }
