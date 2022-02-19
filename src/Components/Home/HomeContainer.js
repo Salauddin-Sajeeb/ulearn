@@ -46,7 +46,7 @@ const HomeContainer = () => {
                         whileHover={{ scale: 1.1 }}
                     >
                         <Link className='button-details' to='/e1p1'>
-                            <h4><b><b>Lesson 1 : greetings & subject pronouns</b></b></h4>
+                            <h4><b>Lesson 1 : greetings & subject pronouns</b></h4>
                             <h5 className='ml-2'>Here you will learn : </h5>
                             <ul>
                                 <li>how to greet people</li>
