@@ -4,6 +4,7 @@ import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom'
 import Nav from '../Lesson1-nav/Nav';
 import ReactPlayer from 'react-player';
+import { motion } from 'framer-motion';
 
 const Page6 = () => {
     const [show, Setshow] = useState(false);
@@ -30,9 +31,10 @@ const Page6 = () => {
                 <div className='hej-audio'>
                     <ReactPlayer
                         url="https://www.youtube.com/watch?v=N9nK-NUFFUo"
-                        height='250px'
+                        height='260px'
+                        width='500px'
                         controls
-                        autoplay
+                        autoPlay
                     />
                 </div>
                 <div className='hej'>
@@ -51,13 +53,14 @@ const Page6 = () => {
             <div className='continue'>
                 <div className='pt-3'>
                     {
-                        !button ? <button onClick={() => {
-                            setTimeout(function () {
-                                setbutton(true)
-                            }, 2000);
+                        !button ? <motion.button
+                            whileTap={{ scale: 1.3, background: "green" }} onClick={() => {
+                                setTimeout(function () {
+                                    setbutton(true)
+                                }, 2000);
 
-                            Setshow(true)
-                        }} className='hej-button '>6<span className='px-5'>Tach</span></button> : null
+                                Setshow(true)
+                            }} className='hej-button '>6<span className='px-5'>Tach</span></motion.button> : null
                     }
                 </div>
                 {

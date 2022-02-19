@@ -34,12 +34,6 @@ const Quiz = () => {
     };
 
     /* Resets the game back to default */
-    const restartGame = () => {
-        setScore(0);
-        setCurrentQuestion(0);
-        setShowResults(false);
-        setCurrentImg(0)
-    };
 
     return (
         <div>
@@ -50,7 +44,7 @@ const Quiz = () => {
             {/* 3. Show results or show the question game  */}
             {showResults ? (
                 /* 4. Final Results */
-                <div className="final-results pt-5">
+                <div className="final-results pt-5 ">
 
                     <h2>
                         You Scored {score}/{Datas.length}
@@ -62,13 +56,8 @@ const Quiz = () => {
                             <img className='img-result img-fluid' src="https://i.ibb.co/gm1wrmM/well-done.png" alt="" srcset="" />
 
                     }
-
-                    <div>
-                        <button className='continue-button btn-lg '
-
-                        ><Link className='continue-btn-style' to='/e3'>Continue</Link></button>
-                    </div>
                 </div>
+
             ) : (
 
                 /* 5. Question Card  */
@@ -98,7 +87,7 @@ const Quiz = () => {
                                                 setTimeout(function () {
                                                     switchImg()
                                                 }, 1000);
-                                            }} className='btn btn-secondary button-option mx-5 px-5'> {option.text}</button>
+                                            }} className='btn btn-warning button-option mx-5 px-5'> {option.text}</button>
                                     )
                                 }
                                 )
@@ -108,6 +97,16 @@ const Quiz = () => {
                     </div>
                 </div>
             )}
+
+            {
+                showResults ?
+                    <div className='continue mt-3'>
+                        <button className='continue-button btn-lg '
+
+                        ><Link className='continue-btn-style' to='/e3'>Continue</Link></button>
+                    </div> : null
+            }
+
         </div>
     );
 };

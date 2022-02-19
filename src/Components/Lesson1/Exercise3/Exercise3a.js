@@ -45,22 +45,26 @@ const Exercise3a = () => {
                 <ProgressBar striped variant='warning' now={70}></ProgressBar>
                 <p className='mt-1 mx-2' >3/6</p>
             </div>
-            <div className='exercise-3 pt-3'>
-                {
-                    data.map(items => <li className='list' key={items.id}>
-                        <div className='d-flex'>
-                            <ReactAudioPlayer
-                                className='mt-5'
-                                src={items.audio}
-                                controls
-                            />
-                            <div className='mt-5 mx-5 background pt-2'>
-                                <p>{items.text1}</p>
-                                <p>{items.text2}</p>
+
+            <div className='exercise-3 pt-3 '>
+                <h1>Listen the subjects pronouns</h1>
+                <div className='list-container'>
+                    {
+                        data.map(items => <li className='list' key={items.id}>
+                            <div className='d-flex py-1'>
+                                <ReactAudioPlayer
+                                    className='mt-4'
+                                    src={items.audio}
+                                    controls
+                                />
+                                <div className='mt-3 mx-5 background pt-2 '>
+                                    <p>{items.text1}</p>
+                                    <p>{items.text2}</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>)
-                }
+                        </li>)
+                    }
+                </div>
             </div>
 
             <div className='continue-section'>

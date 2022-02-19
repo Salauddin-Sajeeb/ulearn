@@ -14,7 +14,7 @@
 .hej-audio
 {
  display: block;
- margin-left: 300px;
+ margin-left: 360px;
  margin-right: auto;
  border-radius: 10px;
  height: 300px;
@@ -22,8 +22,7 @@
 .hello
 {
     height: 50px;
-    align-items: center;
-    justify-content: center;
+  margin-left:30px;
    
 }
 .divider
@@ -38,9 +37,8 @@
 
 .hej
 {
-    margin-left:595px ;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    margin-left:600px ;
+    padding-top: 10px;
     width: fit-content;
     align-items: center;
     justify-content: center;

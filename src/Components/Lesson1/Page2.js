@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from 'react/cjs/react.development';
-import VideoPlayer from 'react-video-js-player'
 import Nav from './Lesson1-nav/Nav';
 import './page2.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import { Link } from 'react-router-dom';
 import ReactPlayer from 'react-player';
+import { motion } from 'framer-motion';
 const Page2 = () => {
 
     const [show, Setshow] = useState(false);
@@ -23,9 +23,10 @@ const Page2 = () => {
                 <div className='hej-audio'>
                     <ReactPlayer
                         url="https://www.youtube.com/watch?v=A5yth-HyCr8"
-                        height='250px'
+                        height='260px'
+                        width='500px'
                         controls
-                        autoplay
+                        autoPlay
                     />
                 </div>
                 <div className='hejda'>
@@ -36,19 +37,20 @@ const Page2 = () => {
                 <div className='divider'>
 
                 </div>
-                <div className='mt-1'>
+                <div className='pt-1 hello'>
                     <h4> Goodbye </h4>
                 </div>
             </div>
             <div className='continue'>
                 <div className='pt-3'>
                     {
-                        !button ? <button onClick={() => {
-                            setTimeout(function () {
-                                setbutton(true)
-                            }, 2000);
-                            Setshow(true)
-                        }} className='hejda-button '>2<span className='px-5'>Hej då </span></button> : null
+                        !button ? <motion.button
+                            whileTap={{ scale: 1.3, background: "green" }} onClick={() => {
+                                setTimeout(function () {
+                                    setbutton(true)
+                                }, 2000);
+                                Setshow(true)
+                            }} className='hejda-button '>2<span className='px-5'>Hej då </span></motion.button> : null
                     }
                 </div>
                 {

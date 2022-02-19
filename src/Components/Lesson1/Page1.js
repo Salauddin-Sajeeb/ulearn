@@ -24,7 +24,8 @@ const Page1 = () => {
                 <div className='hej-audio'>
                     <ReactPlayer
                         url="https://www.youtube.com/watch?v=6F-QkE2IDIA"
-                        height='250px'
+                        height='260px'
+                        width='500px'
                         controls
                         autoplay
                     />
@@ -37,7 +38,7 @@ const Page1 = () => {
                 <div className='divider'>
 
                 </div>
-                <div className='mt-1'>
+                <div className='mt-1 hello'>
                     <h4>Hello</h4>
                 </div>
 
@@ -58,7 +59,7 @@ const Page1 = () => {
                     }
                 </div>
                 {
-                    button ? <button className='continue-button btn-lg '
+                    button ? <button className='continue-button float-right btn-lg '
 
                     ><Link className='continue-btn-style' to='/e1p2'>Continue</Link></button> : null
                 }

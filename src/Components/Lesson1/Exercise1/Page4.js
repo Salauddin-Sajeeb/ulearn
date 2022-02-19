@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 import Nav from '../Lesson1-nav/Nav';
 import ReactPlayer from 'react-player';
+import { motion } from 'framer-motion';
 
 const Page4 = () => {
     const [show, Setshow] = useState(false);
@@ -25,9 +26,10 @@ const Page4 = () => {
                 <div className='hej-audio'>
                     <ReactPlayer
                         url="https://www.youtube.com/watch?v=dIwzYrJ3RK0"
-                        height='250px'
+                        height='260px'
+                        width='500px'
                         controls
-                        autoplay
+                        autoPlay
                     />
                 </div>
                 <div className='god-morgon'>
@@ -46,12 +48,13 @@ const Page4 = () => {
             <div className='continue'>
                 <div className='pt-3'>
                     {
-                        !button ? <button onClick={() => {
-                            setTimeout(function () {
-                                setbutton(true)
-                            }, 2000);
-                            Setshow(true)
-                        }} className='hej-button '>4<span className='px-5'>God dag</span></button> : null
+                        !button ? <motion.button
+                            whileTap={{ scale: 1.3, background: "green" }} onClick={() => {
+                                setTimeout(function () {
+                                    setbutton(true)
+                                }, 2000);
+                                Setshow(true)
+                            }} className='hej-button '>4<span className='px-5'>God dag</span></motion.button> : null
                     }
                 </div>
                 {

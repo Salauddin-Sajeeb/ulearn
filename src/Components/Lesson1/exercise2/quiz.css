@@ -3,8 +3,8 @@
     margin: 0 auto;
   
     /* Dimensions  */
-    width: 70%; /* Can be in percentage also. */
-    height: 250px;
+    width: 75%; /* Can be in percentage also. */
+    height: 210px;
   
     /* Visual  */
     background-color: gray;
@@ -45,12 +45,13 @@
   
   .final-results {
     /* Center the div  */
-    margin: 0 auto;
-  
+    margin-top: 30px;
+ margin-left: 130px;
+ margin-bottom: 50px;
     /* Dimensions  */
     width: 80%; /* Can be in percentage also. */
-    height: 500px;
-  padding-top: 100px;
+    height: 450px;
+  padding-top: 200px;
   
     /* Visual  */
     background-color: white;
@@ -65,6 +66,7 @@
   {
       height: 300px;
       width: 400px;
+     
   }
   
   .button-quiz {
@@ -79,6 +81,7 @@
     font-weight: bold;
     border-radius: 24px;
   }
+ 
 
   .img-quiz
   {
@@ -87,10 +90,13 @@
   }
   .button-option
   {
-      background-color:darkcyan;
+      background-color:lightgray;
       width: 200px;
-      margin-top: 10px;
+      margin-top: 13px;
       font-size: 16px;
+      border: lightgray;
+      padding: 5px;
+      height: 40px;
   }
   .button-option :hover
   {
