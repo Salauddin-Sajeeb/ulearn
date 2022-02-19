@@ -98,7 +98,7 @@ const Quiz = () => {
                                                 setTimeout(function () {
                                                     switchImg()
                                                 }, 1000);
-                                            }} className='btn btn-secondary button-option mx-5 px-5'> {option.text}</button>
+                                            }} className='btn btn-warning text-dark button-option mx-5 px-5'> {option.text}</button>
                                     )
                                 }
                                 )
