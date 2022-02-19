@@ -1,118 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
-.question-card {
-    /* Center the div  */
-    margin: 0 auto;
+.question-card 
+{
+  /* Center the div  */
+  margin: 0 auto;
   
-    /* Dimensions  */
-    width: 75%; /* Can be in percentage also. */
-    height: 220px;
+  /* Dimensions  */
+  width: 70%; /* Can be in percentage also. */
+  height: 250px;
   
-    /* Visual  */
-    background-color: white;
-    padding: 10px;
-    border-radius: 16px;
-    color: white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-      margin-top: 40px;
-  }
-  
-  .ul-quiz {
-    list-style: none;
-    flex-direction: column;
+  /* Visual  */
+  background-color: white;
+  padding: 10px;
+  border-radius: 16px;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  margin-top: 40px;
+}
+.ul-quiz 
+{
+  list-style: none;
+  flex-direction: column;
   flex-wrap: wrap;
-  }
-  .option-quiz
-  {
-      margin-top: 10px;
-  }
-  
-  .li-quiz {
-    margin-top: 5px;
-    background-color: darkgray;
-    padding: 5px;
-    border: 2px solid white;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .question-text {
-    color: darkblue;
-    font-size: 24px;
-  }
-  
+}
+.option-quiz
+{
+  margin-top: 20px;
+}
+.li-quiz 
+{
+  margin-top: 5px;
+  background-color: #FBC556;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.question-text 
+{
+  color: darkblue;
+  font-size: 24px;
+}
   /* Final Results  */
+.final-results 
+{
+  /* Center the div  */
+  margin: 0 auto;
   
-  .final-results {
-    /* Center the div  */
-    margin-top: 30px;
- margin-left: 130px;
- margin-bottom: 50px;
-    /* Dimensions  */
-    width: 80%; /* Can be in percentage also. */
-    height: 450px;
-  padding-top: 200px;
+  /* Dimensions  */
+  width: 80%; /* Can be in percentage also. */
+  height: 500px;
+  padding-top: 100px;
   
-    /* Visual  */
-    background-color: white;
-    padding: 16px;
-    border-radius: 16px;
-    color: black;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-  }
-
-  .img-result
-  {
-      height: 300px;
-      width: 400px;
-     
-  }
-  
-  .button-quiz {
-    background-color: red; /* Green */
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 24px;
-  }
- 
-
-  .img-quiz
-  {
-      height: 210px;
-      width: 420px;
-  }
-  .button-option
-  {
-      background-color:lightgray;
-      width: 200px;
-      margin-top: 13px;
-      font-size: 14px;
-      border: lightgray;
-      padding: 5px;
-      height: 54px;
-      font-family: 'Be Vietnam Pro', sans-serif;
-      color: #24344F;
-  }
-  .button-option :hover
-  {
-      transform: scale(1.1);
-      transition: transform 200ms ease-in-out;
-      cursor: pointer;
-  }
-  .question-card{
-    font-family: 'Be Vietnam Pro', sans-serif;
-    color: #24344F;
-  }
-  .match-text
-  {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    color: #24344F;
-  }
+  /* Visual  */
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  color: black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.img-result
+{
+  height: 300px;
+  width: 400px;
+}
+.button-quiz 
+{
+  background-color: red; /* Green */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 20px;
+}
+.img-quiz
+{
+  height: 210px;
+  width: 420px;
+}
+.button-option
+{
+  background-color: #E6E6E6;
+  width: 200px;
+  height: 70px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.button-option :hover
+{
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+  cursor: pointer;
+}
+.py-1
+{
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #24344F;
+}
+h2
+{
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #24344F;
+}

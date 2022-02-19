@@ -1,17 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Raleway&display=swap');
 .home-container
 {
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size: contain;
     background-repeat:var(--home-container);
     height: 1200px;
-    
 }
 .memoji
 {
     height: 200px;
     left: 0;
     object-fit:contain;
-  
   
 }
 .course-complete
@@ -27,17 +26,11 @@
 {
     font-family: 'Be Vietnam Pro', sans-serif;
     color: #24344F;
-  
 }
-.course-complete-txt
+.d-flex
 {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    color: #24344F;
-  
+    font-family: 'Raleway', sans-serif;
 }
-
-
-
 .ellipse
 {
     background-color: #E69C05;
@@ -73,64 +66,46 @@
     background-color: #24344F;
     margin-left: 160px;
     margin-top: 40px;
-    
 }
-
 .button
 {
     padding: 20px;
     background-color: white;
-    width: 800px;
+    width: 650px;
     border-radius: 5px;
     text-align: start;
     height: 160px ;
-  
-    
 }
-
-
 .button-details
 {
-    text-decoration: none;
+  text-decoration: none;
   color: black;
 }
-
 .button-2
-
 {
     padding: 20px;
     background-color: white;
-    width: 800px;
+    width: 650px;
     border-radius: 5px;
     margin-top: 20px;
     height: 160px;
     text-align: start;
-   
 }
-
-
 .lessons-input
 {
     margin-left: 50px;
- 
     display: flex;
     flex-direction: column;
-   
 }
 .lessons-input :hover
 {
-    background-color: #FBC556;
-
-
+  background-color: #FBC556;
 }
 ul
 {
-   
     text-align: start;
 }
 h4
 {
-     
-   font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
-

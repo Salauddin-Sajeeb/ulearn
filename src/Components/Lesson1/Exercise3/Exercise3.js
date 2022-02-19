@@ -14,14 +14,13 @@ function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
 }
 
-
 const rows = [
-    createData('first Singular', 'I', 'jag'),
+    createData('first singular', 'I', 'jag'),
     createData('second singular', 'you', 'du'),
     createData('third singular', 'he', 'han'),
     createData('', 'she', 'hon'),
-    createData('', 'it', 'den(en-form)'),
-    createData('', '', 'ett(ett-form)'),
+    createData('', 'it', 'den (en-form)'),
+    createData('', '', 'ett (ett-form)'),
     createData('first plural', 'we', 'vi'),
     createData('second plural', 'You', 'ni'),
     createData('third plural', 'they', 'de')
@@ -38,8 +37,8 @@ const Exercise3 = () => {
             </div>
 
             <div className='exercise-3 pt-3'>
-                <h2>Subject Pronouns</h2>
-                <h4 className='my-3 table-head'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
+                <h2>Subject pronouns</h2>
+                <h4 className='my-3'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
                 <div className="table-container">
                     <div className='table-section'>
                         <TableContainer component={Paper}>
@@ -63,7 +62,6 @@ const Exercise3 = () => {
                                             </TableCell>
                                             <TableCell align="right">{row.calories}</TableCell>
                                             <TableCell align="right">{row.fat}</TableCell>
-
                                             <TableCell align="right">{row.carbs}</TableCell>
                                             <TableCell align="right">{row.protein}</TableCell>
                                         </TableRow>

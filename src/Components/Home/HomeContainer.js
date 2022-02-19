@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -13,7 +12,7 @@ const HomeContainer = () => {
                 <img className='memoji mx-5 img-fluid' src="https://i.ibb.co/NKX2fMH/memoji.png" alt="" />
                 <div className=''>
                     <h1 className='text-start mt-3'>Hej!</h1>
-                    <h3 className='d-flex course-complete-txt'><span className='mx-2'>You have Completed</span> {percent}% of the course</h3>
+                    <h3 className='d-flex'><span className='mx-2'>You have completed</span><b> {percent}% </b> &nbsp;of the course</h3>
                 </div>
 
             </div>
@@ -47,11 +46,11 @@ const HomeContainer = () => {
                         whileHover={{ scale: 1.1 }}
                     >
                         <Link className='button-details' to='/e1p1'>
-                            <h4>Lesson 1 : Grettings & Subject Pronouns</h4>
-                            <h5 className='ml-2'>Here You will learn : </h5>
+                            <h4><b><b>Lesson 1 : greetings & subject pronouns</b></b></h4>
+                            <h5 className='ml-2'>Here you will learn : </h5>
                             <ul>
-                                <li>How to Greet People</li>
-                                <li>About Subject pronouns</li>
+                                <li>how to greet people</li>
+                                <li>subject pronouns</li>
                             </ul>
                         </Link>
 
@@ -63,11 +62,11 @@ const HomeContainer = () => {
                         disabled={!lession1 ? true : false}
                     >
 
-                        <h4>Lesson 2 : Grettings & Subject Pronouns</h4>
-                        <h6 className='ml-2'>Here You will learn : </h6>
+                        <h4>Lesson 2 : greetings & subject pronouns</h4>
+                        <h6 className='ml-2'>Here you will learn : </h6>
                         <ul>
-                            <li>How to Greet People</li>
-                            <li>About Subject pronouns</li>
+                            <li>how to greet people</li>
+                            <li>subject pronouns</li>
                         </ul>
 
                     </motion.button>
@@ -79,5 +78,6 @@ const HomeContainer = () => {
         </div>
     );
 };
+
 
 export default HomeContainer;

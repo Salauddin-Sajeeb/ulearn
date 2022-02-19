@@ -1,88 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
 .page-1
 {
-    background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 80vh;
+   background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
+   background-size:cover;
+   background-repeat: no-repeat;
+   height: 80vh;
 }
 .progress
 {
-    width: 700px;
-    margin-left: 15px;
-    margin-top: 10px;
+   width: 700px;
+   margin-left: 15px;
+   margin-top: 10px;
 }
 .hej-audio
 {
- display: block;
- margin-left: 360px;
- margin-right: auto;
- border-radius: 10px;
- height: 300px;
+   display: block;
+   margin-left: 300px;
+   margin-right: auto;
+   border-radius: 10px;
+   height: 300px;
 }
 .hello
 {
-    height: 50px;
-  margin-left:30px;
-   
+   margin-left:595px ;
+   height: 50px;
+   align-items: center;  
+   justify-content: center;
 }
 .divider
 {
-    width: 300px;
-    background-color:gray;
-    margin-left: 470px;
-    height: 3px;
-    align-items: center;  
-    justify-content: center;
+   width: 300px;
+   background-color:gray;
+   margin-left: 470px;
+   height: 3px;
+   align-items: center;  
+   justify-content: center;
 }
-
 .hej
 {
-    margin-left:600px ;
-    padding-top: 10px;
-    width: fit-content;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s ease-in-out;
+   margin-left:595px ;
+   padding-top: 20px;
+   padding-bottom: 10px;
+   width: fit-content;
+   align-items: center;
+   justify-content: center;
+   transition: 0.5s ease-in-out;
 }
 .hej :hover
 {
-    background-color: green;
+   background-color: #51E179;
 }
-
 .continue
 {
-    height: 60px;
-    background-color: white;
+   height: 60px;
+   background-color: white;
 }
-
 .hej-button
 {
-    margin-top: 10px;
-    width: 250px;
-    border-style: none;
-    height: 40px;
-    background-color:grey;
-    
+   margin-top: 10px;
+   width: 500px;
+   border-style: none;
+   height: 40px;
+   background-color: #E6E6E6;
+   border-radius: 5px;
 }
-
 .continue-button
 {
-    color:black;
-    text-decoration: none;
-    background-color: darkorange;
-    margin-left: 900px;
-    width: 145px;
-   
-    border-style: none;
-
+   color:black;
+   font-family: 'Montserrat', sans-serif;
+   text-decoration: none;
+   background-color: #FAB424;
+   margin-left: 900px;
+   width: 145px;
+   border-style: none;
 }
 .continue-btn-style
 {
-    text-decoration: none;
-    color: black;
+   text-decoration: none;
+   color: black;
 }
-.hej-hover :hover
+.py-4
 {
-    background-color: #FBC556;
+   font-family: 'Be Vietnam Pro', sans-serif;
+   color: #24344F;
+}
+h4
+{
+   font-family: 'Raleway', sans-serif;
+}
+.pt-3 :hover
+{
+   background-color: #FBC556;
 }

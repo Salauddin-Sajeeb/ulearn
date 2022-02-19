@@ -5,7 +5,6 @@
     background-size:cover;
     background-repeat: no-repeat;
     height: 80vh;
-  
 }
 .table-section
 {
@@ -14,8 +13,6 @@
     padding-left: 40px;
     padding-right: 40px;
     font-weight: 400;
-  
-   
 }
 .thead
 {
@@ -25,19 +22,10 @@
 {
     font-weight: 500;
 }
-
 .continue-section
 {
     height: 60px;
     background-color: white;
-}
-.btn-style
-{
-  
-}
-.continue-btn
-{
-
 }
 .list
 {
@@ -47,10 +35,6 @@
  
     display: flex;
     margin-left: 30px;
-    background-color: white;
-    width: 90%;
-    margin: auto;
-    
    
 }
 .background
@@ -60,24 +44,16 @@
     border-radius: 5px;
     height: 75px;
 }
-.list-container
-{
-    width: 90%;
-    height: 420px;
-    background-color: white;
-    margin: auto;
-}
-.table-head
+.my-3
 {
     font-family: 'Raleway', sans-serif;
 }
-
 h4
 {
-   font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 h2
 {
- font-family: 'Be Vietnam Pro', sans-serif;
- color: #24344F;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #24344F;
 }

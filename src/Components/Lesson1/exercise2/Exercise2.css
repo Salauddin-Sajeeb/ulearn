@@ -4,15 +4,15 @@
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 83vh;
+    height: 85vh;
 }
 .video-section
 {
     background-color: blanchedalmond;
     width: 500px;
-    height: 100px;
+    height: 150px;
     margin-left: 350px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .button-section
 {
@@ -31,12 +31,12 @@
 }
 .continue-btn
 {
-    background-color: #FAB424;
+    color:black;
     font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    background-color: #FAB424;
     margin-left: 900px;
     width: 145px;
     border-style: none;
-    margin-top: 10px;
- 
 }
 
