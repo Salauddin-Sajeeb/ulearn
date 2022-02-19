@@ -23,6 +23,18 @@
 {
     flex: 1;
 }
+.text-start
+{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #24344F;
+  
+}
+.course-complete-txt
+{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #24344F;
+  
+}
 
 
 
@@ -107,14 +119,18 @@
 }
 .lessons-input :hover
 {
-    
-  background-color: aqua;
+    background-color: #FBC556;
 
 
 }
 ul
 {
-    list-style: none;
+   
     text-align: start;
+}
+h4
+{
+     
+   font-family: 'Be Vietnam Pro', sans-serif;
 }
 

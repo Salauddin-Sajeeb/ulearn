@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
 .page-1
 {
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
@@ -80,4 +81,8 @@
 {
     text-decoration: none;
     color: black;
+}
+.hej-hover :hover
+{
+    background-color: #FBC556;
 }

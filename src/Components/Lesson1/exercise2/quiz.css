@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
 .question-card {
     /* Center the div  */
     margin: 0 auto;
   
     /* Dimensions  */
     width: 75%; /* Can be in percentage also. */
-    height: 210px;
+    height: 220px;
   
     /* Visual  */
-    background-color: gray;
+    background-color: white;
     padding: 10px;
     border-radius: 16px;
     color: white;
@@ -93,14 +94,25 @@
       background-color:lightgray;
       width: 200px;
       margin-top: 13px;
-      font-size: 16px;
+      font-size: 14px;
       border: lightgray;
       padding: 5px;
-      height: 40px;
+      height: 54px;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      color: #24344F;
   }
   .button-option :hover
   {
       transform: scale(1.1);
       transition: transform 200ms ease-in-out;
       cursor: pointer;
+  }
+  .question-card{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #24344F;
+  }
+  .match-text
+  {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #24344F;
   }

@@ -32,19 +32,19 @@ const Page1 = () => {
                 </div>
                 <div className='hej'>
                     {
-                        show ? <h4>Hej</h4> : null
+                        show ? <h5>Hej</h5> : null
                     }
                 </div>
                 <div className='divider'>
 
                 </div>
                 <div className='mt-1 hello'>
-                    <h4>Hello</h4>
+                    <h5>Hello</h5>
                 </div>
 
             </div>
             <div className='continue'>
-                <div className='pt-3'>
+                <div className='pt-3 hej-hover'>
                     {
                         !button ? <motion.button
 

@@ -13,7 +13,7 @@ const HomeContainer = () => {
                 <img className='memoji mx-5 img-fluid' src="https://i.ibb.co/NKX2fMH/memoji.png" alt="" />
                 <div className=''>
                     <h1 className='text-start mt-3'>Hej!</h1>
-                    <h3 className='d-flex'><span className='mx-2'>You have Completed</span> {percent}% of the course</h3>
+                    <h3 className='d-flex course-complete-txt'><span className='mx-2'>You have Completed</span> {percent}% of the course</h3>
                 </div>
 
             </div>

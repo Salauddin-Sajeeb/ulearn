@@ -14,6 +14,7 @@ function createData(name, calories, fat, carbs, protein) {
     return { name, calories, fat, carbs, protein };
 }
 
+
 const rows = [
     createData('first Singular', 'I', 'jag'),
     createData('second singular', 'you', 'du'),
@@ -38,7 +39,7 @@ const Exercise3 = () => {
 
             <div className='exercise-3 pt-3'>
                 <h2>Subject Pronouns</h2>
-                <h4 className='my-3'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
+                <h4 className='my-3 table-head'>Learning Swedish subject pronouns displayed in the table below is vital to the language</h4>
                 <div className="table-container">
                     <div className='table-section'>
                         <TableContainer component={Paper}>
@@ -62,6 +63,7 @@ const Exercise3 = () => {
                                             </TableCell>
                                             <TableCell align="right">{row.calories}</TableCell>
                                             <TableCell align="right">{row.fat}</TableCell>
+
                                             <TableCell align="right">{row.carbs}</TableCell>
                                             <TableCell align="right">{row.protein}</TableCell>
                                         </TableRow>
@@ -75,7 +77,7 @@ const Exercise3 = () => {
             </div>
             <div className='continue-section'>
                 <button className='continue-btn  btn-lg'>
-                    <Link className='btn-style' to='/e3p1'>Continue</Link>
+                    <Link className='btn-style' to='/e3p1'>CONTINUE</Link>
                 </button>
             </div>
 

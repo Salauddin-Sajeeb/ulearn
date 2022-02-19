@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
 .exercise-3
 {
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
@@ -65,4 +66,18 @@
     height: 420px;
     background-color: white;
     margin: auto;
+}
+.table-head
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+h4
+{
+   font-family: 'Raleway', sans-serif;
+}
+h2
+{
+ font-family: 'Be Vietnam Pro', sans-serif;
+ color: #24344F;
 }

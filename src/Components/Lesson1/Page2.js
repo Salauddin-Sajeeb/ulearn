@@ -31,18 +31,18 @@ const Page2 = () => {
                 </div>
                 <div className='hejda'>
                     {
-                        show ? <h4>Hej då </h4> : null
+                        show ? <h5>Hej då </h5> : null
                     }
                 </div>
                 <div className='divider'>
 
                 </div>
                 <div className='pt-1 hello'>
-                    <h4> Goodbye </h4>
+                    <h5> Goodbye </h5>
                 </div>
             </div>
             <div className='continue'>
-                <div className='pt-3'>
+                <div className='pt-3 hej-hover'>
                     {
                         !button ? <motion.button
                             whileTap={{ scale: 1.3, background: "green" }} onClick={() => {

@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Montserrat:wght@500&family=Raleway&display=swap');
 .exercise-2
 {
     background-image: url("https://i.ibb.co/FBT6f2B/background.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 83vh;
 }
 .video-section
 {
@@ -30,7 +31,8 @@
 }
 .continue-btn
 {
-    background-color: darkorange;
+    background-color: #FAB424;
+    font-family: 'Montserrat', sans-serif;
     margin-left: 900px;
     width: 145px;
     border-style: none;

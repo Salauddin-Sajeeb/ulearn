@@ -62,11 +62,11 @@ const Quiz = () => {
 
                 /* 5. Question Card  */
                 <div>
-                    <h1 className='py-1'>Match the correct Answer with image</h1>
+                    <h1 className='py-1 match-text'>Match the correct translations from the images</h1>
                     <img className='img-quiz' src={images[currentImg]} alt="" />
                     <div className="question-card">
                         {/* Current Question  */}
-                        <h2>
+                        <h2 className='ques'>
                             Question: {currentQuestion + 1} out of {Datas.length}
                         </h2>
 
@@ -103,7 +103,7 @@ const Quiz = () => {
                     <div className='continue mt-3'>
                         <button className='continue-button btn-lg '
 
-                        ><Link className='continue-btn-style' to='/e3'>Continue</Link></button>
+                        ><Link className='continue-btn-style' to='/e3'>CONTINUE</Link></button>
                     </div> : null
             }
 

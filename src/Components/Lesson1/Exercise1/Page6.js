@@ -39,19 +39,19 @@ const Page6 = () => {
                 </div>
                 <div className='hej'>
                     {
-                        show ? <h4 className=''>Tach</h4> : null
+                        show ? <h5 className=''>Tach</h5> : null
                     }
                 </div>
                 <div className='divider'>
 
                 </div>
                 <div className='mt-1'>
-                    <h4>Thank You </h4>
+                    <h5>Thank You </h5>
                 </div>
 
             </div>
             <div className='continue'>
-                <div className='pt-3'>
+                <div className='pt-3 hej-hover'>
                     {
                         !button ? <motion.button
                             whileTap={{ scale: 1.3, background: "green" }} onClick={() => {
