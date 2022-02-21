@@ -5,13 +5,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import './exercise5.css'
 import Nav from '../Lesson1-nav/Nav';
-
 import { Link } from 'react-router-dom';
-
-import VideoPlayer from 'react-video-js-player'
 import { ProgressBar } from 'react-bootstrap';
-import { FormControl, MenuItem, Select } from '@mui/material';
 import ReactPlayer from 'react-player';
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -26,41 +23,42 @@ const style = {
     fontWeight: '700'
 
 };
-const options = [
-    { name: "jag", id: 1 },
-    { name: "vi", id: 2 },
-    { name: "de", id: 3 },
 
-];
 const Exercise5 = () => {
-
+    const [solution, setSolution] = useState(false)
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [val, setVal] = useState();
-    const jagHandle = (e) => {
-        e.preventDefault();
-        let value = e.target.value;
-        if (value !== 'jag') {
-            alert('wrong answer')
-            e.target.value = ''
-        }
+    const [wrong1, setWrong1] = useState(false)
+    const [wrong2, setWrong2] = useState(false)
+    const [wrong3, setWrong3] = useState(false)
+    const [wrong4, setWrong4] = useState(false)
+    const [wrong5, setWrong5] = useState(false)
+    const [score, setScore] = useState(0)
+    const [result, SetResult] = useState(false)
 
+    const [inputVal, setInputVal] = useState({
+        input1: "",
+        input2: "",
+        input3: '',
+        input4: '',
+        input5: ''
+    })
+    const expectedVal = {
+        expVal1: "jag",
+        expVal2: "vi",
+        expVal3: "jag",
+        expVal4: "vi",
+        expVal5: "jag",
     }
-    const vi = (e) => {
-        e.preventDefault();
-        let value = e.target.value;
-        if (value !== 'vi') {
-            alert('wrong answer!')
-            e.target.value = ''
-        }
+    const verifyResult = () => {
+        if (inputVal.input1 === "" || inputVal.input2 === "" || inputVal.input3 === "" || inputVal.input4 === "" || inputVal.input5 === "")
 
+            alert('please fill in inputs first ')
+        else
+            SetResult(true)
     }
-    const [age, setAge] = React.useState('');
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
 
     return (
         <div>
@@ -69,7 +67,24 @@ const Exercise5 = () => {
                 <ProgressBar striped variant='warning' now={90}></ProgressBar>
                 <p className='mt-1 mx-2' >5/6</p>
             </div>
-            <div className='exercise-5'>
+
+            {result ? (
+                /* 4. Final Results */
+                <div className="final-results pt-5 ">
+
+                    <h2>
+                        You Scored {score}/5
+                    </h2>
+                    {
+                        score < 4 ?
+                            <img className='img-result img-fluid' src='https://i.ibb.co/R4vsyJp/retry.png'></img>
+                            :
+                            <img className='img-result img-fluid' src="https://i.ibb.co/gm1wrmM/well-done.png" alt="" />
+
+                    }
+                </div>
+
+            ) : (<div className='exercise-5'>
                 <h1 className='pt-4'>Myra Granberg</h1>
                 <div className='video'>
                     <ReactPlayer
@@ -86,27 +101,94 @@ const Exercise5 = () => {
                     <div className='blank-area px-3'>
 
 
-                        <Select
-                            sx={{ height: 10, border: 'none' }}
-                            labelId="demo-simple-select-label"
-                            id="demo-simple-select"
-                            value={age}
+                        <input type='text' style={{ background: wrong1 ? "red" : null }}
 
-                            onChange={handleChange}
-                        >
-                            <MenuItem value={0}>--select--</MenuItem>
-                            <MenuItem value={10}>jag</MenuItem>
-                            <MenuItem value={20}>de</MenuItem>
-                            <MenuItem value={30}>vi</MenuItem>
-                        </Select>
+                            name='input1'
+                            value={inputVal.input1}
+                            onChange={(e) => {
+
+                                setInputVal({ ...inputVal, input1: e.target.value })
+                                if (inputVal.input1 === expectedVal.expVal1) {
+                                    setWrong1(false)
+                                    setScore(score + 1)
+                                    console.log(score)
+                                }
+                                else
+                                    setWrong1(true)
+                            }}
+
+                        />
                         ska älska dig tills mitt hjärta går under
                         Uti alla stunder, blixtar och dunder
-                        Lova mig att <input onBlur={vi} type="text" /> räknar sekunder
-                        Åh, baby, <input onBlur={jagHandle} type="text" /> är alltid med dig
+                        Lova mig att  <input type='text' style={{ background: wrong2 ? "red" : null }}
+
+                            name='input2'
+                            value={inputVal.input2}
+                            onChange={(e) => {
+                                setInputVal({ ...inputVal, input2: e.target.value })
+                                if (inputVal.input2 === expectedVal.expVal2) {
+                                    setWrong2(false)
+                                    setScore(score + 1)
+                                    console.log(score)
+                                }
+                                else
+                                    setWrong2(true)
+                            }}
+
+                        /> räknar sekunder
+                        Åh, baby, <input type='text' style={{ background: wrong3 ? "red" : null }}
+
+                            name='input3'
+                            value={inputVal.input3}
+                            onChange={(e) => {
+                                setInputVal({ ...inputVal, input3: e.target.value })
+                                if (inputVal.input3 === expectedVal.expVal3) {
+                                    setWrong3(false)
+                                    setScore(score + 1)
+                                    console.log(score)
+
+                                }
+                                else
+                                    setWrong3(true)
+                            }}
+
+                        />  är alltid med dig
                         Älska dig tills mitt hjärta går under
                         Uti alla stunder, med blixtar och dunder
-                        Lova mig att <input onBlur={vi} type="text" /> räknar sekunder
-                        För, baby, <input onBlur={jagHandle} type="text" /> är alltid med dig
+                        Lova mig att <input type='text' style={{ background: wrong4 ? "red" : null }}
+
+                            name='input4'
+                            value={inputVal.input4}
+                            onChange={(e) => {
+                                setInputVal({ ...inputVal, input4: e.target.value })
+                                if (inputVal.input4 === expectedVal.expVal4) {
+                                    setWrong4(false)
+                                    setScore(score + 1)
+                                    console.log(score)
+                                }
+                                else
+                                    setWrong4(true)
+                            }}
+
+                        />  räknar sekunder
+                        För, baby, <input type='text' style={{ background: wrong5 ? "red" : null }}
+
+                            name='input5'
+                            value={inputVal.input5}
+                            onChange={(e) => {
+                                setInputVal({ ...inputVal, input5: e.target.value })
+                                if (inputVal.input5 === expectedVal.expVal5) {
+                                    setWrong5(false)
+                                    setScore(score + 1)
+                                    console.log(score)
+
+                                }
+                                else
+                                    setWrong5(true)
+
+                            }}
+
+                        />  är alltid med dig
 
 
                     </div>
@@ -126,7 +208,10 @@ const Exercise5 = () => {
                 </div>
                 <div className='hint-area d-flex '>
                     <div className='solution pt-3'>
-                        <Button className='bg-warning text-dark py-2' onClick={handleOpen}>Show Solution</Button>
+                        <Button disabled={solution} className='bg-warning text-dark py-2' onClick={() => {
+                            handleOpen()
+                            setSolution(true)
+                        }}>Show Solution</Button>
                         <Modal
 
                             open={open}
@@ -153,19 +238,22 @@ const Exercise5 = () => {
 
 
                     </div>
-
-
-
-
                     <div className='continue'>
-                        <button className='continue-button  btn-lg'>
-                            <Link className='btn-style' to='/e6'>Continue</Link>
+                        <button onClick={verifyResult} className='continue-button  btn-lg'>
+                            NEXT
                         </button>
                     </div>
-
                 </div>
 
-            </div>
+            </div>)}
+            {
+                result ?
+                    <div className='continue mt-3 ex5-result next'>
+                        <button className='continue-button btn-lg bg-warning '
+
+                        ><Link className='continue-btn-style' to='/e3'>CONTINUE</Link></button>
+                    </div> : null
+            }
         </div>
 
     );
