@@ -52,11 +52,12 @@ input{
     outline: 0;
     background: transparent;
     width: 60px;
-    height: 10px;
-    border-bottom: 1px solid black;
+    height: 12px;
+    border-bottom: 2px solid black;
     align-items: center;
     justify-content: center;
     padding: 10px;
+    transition: .5 ease;
 }
 input :focus
 {
